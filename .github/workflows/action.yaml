@@ -12,3 +12,6 @@ jobs:
     steps:
       - name: Demarrage
         run: echo "Démarrage sur ${{ github.ref }}"
+      - name: "recuperation du code"
+        run: echo "Récupération code"
+        if: ${{github.ref == 'refs/heads/main'}}
