@@ -1,0 +1,14 @@
+name: Action tp2
+on:
+  workflow_dispatch:
+    inputs:
+      serveur:
+        description: 'Environnement de déploiement'
+        required: true
+        default: 'dev'
+jobs:
+  deploy-env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Demarrage
+        run: echo "Démarrage"
