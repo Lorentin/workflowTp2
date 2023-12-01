@@ -20,3 +20,11 @@ jobs:
       - name : Deploiement production
         if: github.event.inputs.serveur == 'prod'
         run: echo "deploiement en prod"
+
+      - name : Deploiement qualificatiion
+        if: github.event.inputs.serveur == 'qual'
+        run: echo "deploiement en qual"
+
+      - name : Deploiement developpement
+        if: github.event.inputs.serveur == 'dev'
+        run: echo "deploiement en dev"
