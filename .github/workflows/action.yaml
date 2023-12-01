@@ -23,8 +23,13 @@ jobs:
 
       - name : Deploiement qualificatiion
         if: github.event.inputs.serveur == 'qual'
-        run: echo "deploiement en qual"
+        run: |
+          echo "deploiement en qual"
+          exit 1
 
       - name : Deploiement developpement
         if: github.event.inputs.serveur == 'dev'
         run: echo "deploiement en dev"
+      
+      - name : Fin
+        run: echo "Fin"
